@@ -9,7 +9,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Location",
-      info: "Akanpally Village, Maheshwaram Mandal, Ranga Reddy District, Telangana - 509325",
+      info: "Mandapam at RachaBanda, Akanpally village, Maheshwaram Mandal, Ranga Reddy Dist, Telangana - 509325",
       link: "#"
     },
     {

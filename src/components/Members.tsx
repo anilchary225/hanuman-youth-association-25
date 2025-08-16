@@ -5,8 +5,8 @@ import { Crown, Heart, Users, Sparkles } from "lucide-react";
 const Members = () => {
   const coreMembers = [
     {
-      name: "Chennakesava",
-      role: "President",
+      name: "Chennakesava Goud",
+      role: "Youth President",
       icon: Crown,
       description: "Leading our association with dedication to Ganesh Chaturthi celebrations",
       image: "/placeholder.svg",
@@ -14,7 +14,7 @@ const Members = () => {
     },
     {
       name: "Shekhar Yadav",
-      role: "Vice President", 
+      role: "Vice-President", 
       icon: Heart,
       description: "Supporting our community initiatives and cultural preservation",
       image: "/placeholder.svg",
@@ -22,28 +22,18 @@ const Members = () => {
     },
     {
       name: "Thirumalesh Goud",
-      role: "Event Coordinator",
+      role: "Vice-President 2",
       icon: Sparkles,
       description: "Creative organizer behind our spectacular Ganesh celebrations",
       image: "/placeholder.svg",
       responsibilities: ["Event Planning", "Decoration", "Performance Management"]
-    },
-    {
-      name: "Prashanth Goud",
-      role: "Cultural Secretary",
-      icon: Users,
-      description: "Preserving our Telugu traditions and community values",
-      image: "/placeholder.svg",
-      responsibilities: ["Cultural Programs", "Traditional Activities", "Community Engagement"]
-    },
-    {
-      name: "Ravi Goud",
-      role: "Treasurer",
-      icon: Crown,
-      description: "Managing finances and ensuring transparent operations",
-      image: "/placeholder.svg",
-      responsibilities: ["Financial Management", "Budget Planning", "Event Support"]
     }
+  ];
+
+  const youthMembers = [
+    "Balu Yadav", "Prashanth Goud", "Ravi Goud", "Shiva Chary", "Sai Yadav",
+    "Praveen Chary", "Sathish Yadav", "Anil Chary", "Mahesh Yadav", "Ajay Yadav",
+    "Chanti Yadav", "Bunny Rajak", "Akhil Yadav", "Laddu Yadav", "ManiKanta Yadav"
   ];
 
   return (
@@ -113,6 +103,35 @@ const Members = () => {
               </Card>
             );
           })}
+        </div>
+
+        {/* Youth Members Grid */}
+        <div className="mt-16">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-primary mb-4">Youth Members</h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Our dedicated youth members who make every celebration possible
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            {youthMembers.map((member, index) => (
+              <Card 
+                key={member}
+                className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-none bg-gradient-to-br from-white to-primary/5 dark:from-gray-900 dark:to-primary/10 animate-slide-up-fade"
+                style={{ animationDelay: `${(index + 3) * 0.05}s` }}
+              >
+                <CardContent className="p-4 text-center">
+                  <div className="w-12 h-12 mx-auto rounded-full bg-gradient-to-r from-primary to-secondary p-1 mb-3">
+                    <div className="w-full h-full rounded-full bg-muted flex items-center justify-center">
+                      <Users className="h-6 w-6 text-primary" />
+                    </div>
+                  </div>
+                  <h4 className="text-sm font-semibold text-foreground leading-tight">{member}</h4>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
 
         {/* Join Us Section */}

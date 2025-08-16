@@ -168,12 +168,16 @@ const Announcements = () => {
                 <h3 className="text-2xl font-bold text-primary">Stay Updated!</h3>
               </div>
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                Never miss important announcements! Join our WhatsApp group or follow us on social media for real-time updates about events, meetings, and opportunities.
+                Never miss important announcements! Follow us on Instagram or enable notifications for real-time updates about events, meetings, and opportunities.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
-                <Button variant="default" className="bg-gradient-to-r from-primary to-secondary">
+                <Button 
+                  variant="default" 
+                  className="bg-gradient-to-r from-primary to-secondary"
+                  onClick={() => window.open('https://www.instagram.com/varahi_youth_association_2k25', '_blank')}
+                >
                   <Megaphone className="h-4 w-4 mr-2" />
-                  Join WhatsApp Group
+                  Follow on Instagram
                 </Button>
                 <Button variant="outline">
                   <Bell className="h-4 w-4 mr-2" />
