@@ -1,0 +1,152 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Crown, Heart, Users, Sparkles } from "lucide-react";
+
+const Members = () => {
+  const coreMembers = [
+    {
+      name: "Rajesh Kumar",
+      role: "President",
+      icon: Crown,
+      description: "Leading the association with vision and dedication for 5+ years",
+      image: "/placeholder.svg",
+      responsibilities: ["Strategic Planning", "Community Relations", "Event Coordination"]
+    },
+    {
+      name: "Priya Sharma",
+      role: "Vice President", 
+      icon: Heart,
+      description: "Passionate about youth empowerment and cultural preservation",
+      image: "/placeholder.svg",
+      responsibilities: ["Program Management", "Youth Mentoring", "Cultural Activities"]
+    },
+    {
+      name: "Amit Patel",
+      role: "Event Coordinator",
+      icon: Sparkles,
+      description: "Creative mind behind our spectacular Ganesh celebrations",
+      image: "/placeholder.svg",
+      responsibilities: ["Event Planning", "Decoration", "Performance Management"]
+    },
+    {
+      name: "Sneha Reddy",
+      role: "Social Media Manager", 
+      icon: Users,
+      description: "Connecting our community through digital platforms",
+      image: "/placeholder.svg",
+      responsibilities: ["Content Creation", "Community Engagement", "Digital Marketing"]
+    },
+    {
+      name: "Vikram Singh",
+      role: "Treasurer",
+      icon: Crown,
+      description: "Managing finances and ensuring transparent operations",
+      image: "/placeholder.svg",
+      responsibilities: ["Financial Management", "Budget Planning", "Audit Coordination"]
+    },
+    {
+      name: "Kavya Nair",
+      role: "Cultural Secretary",
+      icon: Heart,
+      description: "Preserving traditions while embracing innovation",
+      image: "/placeholder.svg",
+      responsibilities: ["Cultural Programs", "Traditional Activities", "Youth Workshops"]
+    }
+  ];
+
+  return (
+    <section id="members" className="py-20 bg-gradient-to-b from-secondary/10 to-background">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16 animate-slide-up-fade">
+          <h2 className="text-4xl font-bold text-primary mb-4">
+            Our Youth Leaders
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Meet the dedicated individuals who drive our mission and make every celebration memorable
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {coreMembers.map((member, index) => {
+            const IconComponent = member.icon;
+            return (
+              <Card 
+                key={member.name}
+                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-none bg-gradient-to-br from-white to-primary/5 dark:from-gray-900 dark:to-primary/10 animate-slide-up-fade"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <CardContent className="p-6 text-center">
+                  {/* Profile Image */}
+                  <div className="relative mb-4">
+                    <div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-r from-primary to-secondary p-1">
+                      <div className="w-full h-full rounded-full bg-muted flex items-center justify-center overflow-hidden">
+                        <img 
+                          src={member.image} 
+                          alt={member.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center shadow-lg">
+                      <IconComponent className="h-4 w-4 text-white" />
+                    </div>
+                  </div>
+
+                  {/* Member Info */}
+                  <h3 className="text-xl font-bold text-foreground mb-1">{member.name}</h3>
+                  <Badge variant="secondary" className="mb-3 bg-gradient-to-r from-primary/10 to-secondary/10">
+                    {member.role}
+                  </Badge>
+                  
+                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                    {member.description}
+                  </p>
+
+                  {/* Responsibilities */}
+                  <div className="space-y-2">
+                    <h4 className="text-sm font-semibold text-foreground">Key Responsibilities:</h4>
+                    <div className="flex flex-wrap gap-1 justify-center">
+                      {member.responsibilities.map((responsibility, i) => (
+                        <Badge 
+                          key={i} 
+                          variant="outline" 
+                          className="text-xs bg-gradient-to-r from-primary/5 to-secondary/5 hover:from-primary/10 hover:to-secondary/10 transition-all duration-200"
+                        >
+                          {responsibility}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+
+        {/* Join Us Section */}
+        <div className="mt-16 text-center">
+          <Card className="bg-gradient-to-r from-primary/5 to-secondary/5 border-primary/20">
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold text-primary mb-4">Join Our Team!</h3>
+              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                We're always looking for passionate youth who want to contribute to our community and help organize amazing celebrations. Be part of something meaningful!
+              </p>
+              <div className="flex flex-wrap gap-4 justify-center">
+                <Badge variant="secondary" className="px-4 py-2">
+                  <Users className="h-4 w-4 mr-2" />
+                  Open Positions Available
+                </Badge>
+                <Badge variant="outline" className="px-4 py-2">
+                  <Heart className="h-4 w-4 mr-2" />
+                  Volunteer Opportunities
+                </Badge>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Members;
