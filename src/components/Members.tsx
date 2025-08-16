@@ -5,7 +5,7 @@ import { Crown, Heart, Users, Sparkles } from "lucide-react";
 const Members = () => {
   const coreMembers = [
     {
-      name: "Chenna",
+      name: "Chennakesava",
       role: "President",
       icon: Crown,
       description: "Leading our association with dedication to Ganesh Chaturthi celebrations",
@@ -13,7 +13,7 @@ const Members = () => {
       responsibilities: ["Strategic Planning", "Community Relations", "Event Coordination"]
     },
     {
-      name: "Shekar",
+      name: "Shekhar Yadav",
       role: "Vice President", 
       icon: Heart,
       description: "Supporting our community initiatives and cultural preservation",
@@ -21,7 +21,7 @@ const Members = () => {
       responsibilities: ["Program Management", "Youth Mentoring", "Cultural Activities"]
     },
     {
-      name: "Thirumalesh",
+      name: "Thirumalesh Goud",
       role: "Event Coordinator",
       icon: Sparkles,
       description: "Creative organizer behind our spectacular Ganesh celebrations",
@@ -29,12 +29,20 @@ const Members = () => {
       responsibilities: ["Event Planning", "Decoration", "Performance Management"]
     },
     {
-      name: "Balu",
+      name: "Prashanth Goud",
       role: "Cultural Secretary",
       icon: Users,
       description: "Preserving our Telugu traditions and community values",
       image: "/placeholder.svg",
       responsibilities: ["Cultural Programs", "Traditional Activities", "Community Engagement"]
+    },
+    {
+      name: "Ravi Goud",
+      role: "Treasurer",
+      icon: Crown,
+      description: "Managing finances and ensuring transparent operations",
+      image: "/placeholder.svg",
+      responsibilities: ["Financial Management", "Budget Planning", "Event Support"]
     }
   ];
 
