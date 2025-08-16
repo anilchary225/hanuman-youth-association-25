@@ -5,52 +5,36 @@ import { Crown, Heart, Users, Sparkles } from "lucide-react";
 const Members = () => {
   const coreMembers = [
     {
-      name: "Rajesh Kumar",
+      name: "Chenna",
       role: "President",
       icon: Crown,
-      description: "Leading the association with vision and dedication for 5+ years",
+      description: "Leading our association with dedication to Ganesh Chaturthi celebrations",
       image: "/placeholder.svg",
       responsibilities: ["Strategic Planning", "Community Relations", "Event Coordination"]
     },
     {
-      name: "Priya Sharma",
+      name: "Shekar",
       role: "Vice President", 
       icon: Heart,
-      description: "Passionate about youth empowerment and cultural preservation",
+      description: "Supporting our community initiatives and cultural preservation",
       image: "/placeholder.svg",
       responsibilities: ["Program Management", "Youth Mentoring", "Cultural Activities"]
     },
     {
-      name: "Amit Patel",
+      name: "Thirumalesh",
       role: "Event Coordinator",
       icon: Sparkles,
-      description: "Creative mind behind our spectacular Ganesh celebrations",
+      description: "Creative organizer behind our spectacular Ganesh celebrations",
       image: "/placeholder.svg",
       responsibilities: ["Event Planning", "Decoration", "Performance Management"]
     },
     {
-      name: "Sneha Reddy",
-      role: "Social Media Manager", 
-      icon: Users,
-      description: "Connecting our community through digital platforms",
-      image: "/placeholder.svg",
-      responsibilities: ["Content Creation", "Community Engagement", "Digital Marketing"]
-    },
-    {
-      name: "Vikram Singh",
-      role: "Treasurer",
-      icon: Crown,
-      description: "Managing finances and ensuring transparent operations",
-      image: "/placeholder.svg",
-      responsibilities: ["Financial Management", "Budget Planning", "Audit Coordination"]
-    },
-    {
-      name: "Kavya Nair",
+      name: "Balu",
       role: "Cultural Secretary",
-      icon: Heart,
-      description: "Preserving traditions while embracing innovation",
+      icon: Users,
+      description: "Preserving our Telugu traditions and community values",
       image: "/placeholder.svg",
-      responsibilities: ["Cultural Programs", "Traditional Activities", "Youth Workshops"]
+      responsibilities: ["Cultural Programs", "Traditional Activities", "Community Engagement"]
     }
   ];
 
@@ -62,7 +46,7 @@ const Members = () => {
             Our Youth Leaders
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Meet the dedicated individuals who drive our mission and make every celebration memorable
+            Meet our core team leaders from our 20-50 member strong youth association
           </p>
         </div>
 

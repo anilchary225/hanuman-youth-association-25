@@ -24,7 +24,7 @@ const Footer = () => {
         
         <div className="mt-6 pt-6 border-t border-primary/10 text-center text-xs text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Varahi Youth Association. All rights reserved.</p>
-          <p className="mt-1">गणपति बप्पा मोरया | मंगलमूर्ति मोरया</p>
+          <p className="mt-1">గణపతి బాప్పా మోర్య | మంగళమూర్తి మోర్య</p>
         </div>
       </div>
     </footer>

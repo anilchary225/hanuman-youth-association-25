@@ -9,7 +9,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Location",
-      info: "Varahi Temple Complex, Mumbai, Maharashtra",
+      info: "Akanpally Village, Maheshwaram Mandal, Ranga Reddy District, Telangana - 509325",
       link: "#"
     },
     {
