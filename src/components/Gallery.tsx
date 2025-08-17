@@ -2,99 +2,9 @@ import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
-import { Camera, Video, Download, Filter, Calendar, FolderOpen } from "lucide-react"
+import { Camera, Users, Star, Calendar, FolderOpen } from "lucide-react"
 
 const Gallery = () => {
-  const [activeFilter, setActiveFilter] = useState("all")
-  
-  // Gallery data with Google Drive integration
-  const galleryItems = [
-    { 
-      id: 1, 
-      type: "folder", 
-      year: "2025", 
-      title: "Lord Ganesh Procession 2025", 
-      thumbnail: "https://images.unsplash.com/photo-1605379399642-870262d3d051?w=400&h=300&fit=crop",
-      category: "procession",
-      link: "https://drive.google.com/drive/folders/1CRhDwR9C70cXuXgcmlqgPdTAV2Cq7zB9?usp=drive_link"
-    },
-    { 
-      id: 2, 
-      type: "folder", 
-      year: "2025", 
-      title: "Festival Highlights 2025", 
-      thumbnail: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
-      category: "celebration",
-      link: "https://drive.google.com/drive/folders/1R4-rh207TD3eYaqcflSID_uFkU8p5c8N?usp=drive_link"
-    },
-    { 
-      id: 3, 
-      type: "folder", 
-      year: "2025", 
-      title: "Youth Photos 2025", 
-      thumbnail: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop",
-      category: "youth",
-      link: "https://drive.google.com/drive/folders/1jxmslx3yKk5HtFJs40csciaBxfCd2qr0?usp=drive_link"
-    },
-    { 
-      id: 4, 
-      type: "photo", 
-      year: "2024", 
-      title: "Ganesh Procession 2024", 
-      thumbnail: "https://images.unsplash.com/photo-1605379399642-870262d3d051?w=400&h=300&fit=crop",
-      category: "procession"
-    },
-    { 
-      id: 5, 
-      type: "photo", 
-      year: "2024", 
-      title: "Community Prayers", 
-      thumbnail: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
-      category: "prayer"
-    },
-    { 
-      id: 6, 
-      type: "video", 
-      year: "2023", 
-      title: "Festival Highlights 2023", 
-      thumbnail: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
-      category: "celebration"
-    },
-    { 
-      id: 7, 
-      type: "photo", 
-      year: "2023", 
-      title: "Decoration Ceremony", 
-      thumbnail: "https://images.unsplash.com/photo-1605379399642-870262d3d051?w=400&h=300&fit=crop",
-      category: "decoration"
-    },
-    { 
-      id: 8, 
-      type: "photo", 
-      year: "2024", 
-      title: "Youth Volunteers", 
-      thumbnail: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop",
-      category: "volunteers"
-    },
-    { 
-      id: 9, 
-      type: "video", 
-      year: "2024", 
-      title: "Aarti Ceremony", 
-      thumbnail: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
-      category: "prayer"
-    }
-  ]
-
-  const years = ["all", "2025", "2024", "2023", "2022"]
-  const categories = ["all", "procession", "prayer", "celebration", "decoration", "volunteers", "youth"]
-
-  const filteredItems = galleryItems.filter(item => {
-    if (activeFilter === "all") return true
-    return item.year === activeFilter || item.category === activeFilter
-  })
-
   return (
     <section id="gallery" className="py-20 bg-gradient-to-br from-muted/20 to-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -103,193 +13,111 @@ const Gallery = () => {
             Sacred <span className="text-gradient">Memories</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Relive the divine moments of our Ganesh Chaturthi celebrations through our cherished collection 
-            of photos and videos, capturing the essence of devotion and community spirit.
+            Explore our 2025 Ganesh Chaturthi celebration memories through our organized photo and video collections.
           </p>
         </div>
 
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12 animate-slide-up-fade">
-          <div className="flex items-center gap-2 mb-4">
-            <Filter className="h-4 w-4 text-primary" />
-            <span className="text-sm font-medium text-muted-foreground">Filter by:</span>
-          </div>
-          
-          <div className="flex flex-wrap gap-2">
-            {[...years, ...categories.slice(1)].map((filter) => (
-              <Button
-                key={filter}
-                variant={activeFilter === filter ? "default" : "outline"}
-                size="sm"
-                onClick={() => setActiveFilter(filter)}
-                className={`capitalize ${
-                  activeFilter === filter 
-                    ? "primary-gradient text-primary-foreground" 
-                    : "border-primary/20 hover:bg-primary/10"
-                }`}
-              >
-                {years.includes(filter) && <Calendar className="h-3 w-3 mr-1" />}
-                {filter}
-              </Button>
-            ))}
-          </div>
-        </div>
-
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredItems.map((item, index) => (
-            <div key={item.id}>
-              {item.type === "folder" ? (
-                <Card 
-                  className="group cursor-pointer overflow-hidden hover:scale-105 transition-all duration-300 card-shadow border-primary/20 hover:border-primary/40 animate-slide-up-fade"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                  onClick={() => window.open(item.link, '_blank')}
-                >
-                  <CardContent className="p-0 relative">
-                    <div className="aspect-video relative overflow-hidden">
-                      <img
-                        src={item.thumbnail}
-                        alt={item.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                      />
-                      
-                      {/* Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div className="absolute top-4 right-4">
-                          <FolderOpen className="h-6 w-6 text-white" />
-                        </div>
-                        
-                        <div className="absolute bottom-4 right-4">
-                          <Button
-                            size="sm"
-                            variant="secondary"
-                            onClick={(e) => {
-                              e.stopPropagation()
-                              window.open(item.link, '_blank')
-                            }}
-                          >
-                            <FolderOpen className="h-4 w-4" />
-                          </Button>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="p-4">
-                      <div className="flex items-center justify-between mb-2">
-                        <Badge variant="outline" className="text-xs border-primary/30 text-primary">
-                          {item.year}
-                        </Badge>
-                        <Badge 
-                          variant="secondary" 
-                          className="text-xs capitalize bg-accent/10 text-accent border-0"
-                        >
-                          {item.category}
-                        </Badge>
-                      </div>
-                      <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
-                        {item.title}
-                      </h3>
-                    </div>
-                  </CardContent>
-                </Card>
-              ) : (
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Card 
-                      className="group cursor-pointer overflow-hidden hover:scale-105 transition-all duration-300 card-shadow border-primary/20 hover:border-primary/40 animate-slide-up-fade"
-                      style={{ animationDelay: `${index * 0.1}s` }}
-                    >
-                      <CardContent className="p-0 relative">
-                        <div className="aspect-video relative overflow-hidden">
-                          <img
-                            src={item.thumbnail}
-                            alt={item.title}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                          />
-                          
-                          {/* Overlay */}
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div className="absolute top-4 right-4">
-                              {item.type === "video" ? (
-                                <Video className="h-6 w-6 text-white" />
-                              ) : (
-                                <Camera className="h-6 w-6 text-white" />
-                              )}
-                            </div>
-                            
-                            <div className="absolute bottom-4 right-4">
-                              <Button
-                                size="sm"
-                                variant="secondary"
-                                onClick={(e) => {
-                                  e.stopPropagation()
-                                  // Handle download
-                                }}
-                              >
-                                <Download className="h-4 w-4" />
-                              </Button>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        <div className="p-4">
-                          <div className="flex items-center justify-between mb-2">
-                            <Badge variant="outline" className="text-xs border-primary/30 text-primary">
-                              {item.year}
-                            </Badge>
-                            <Badge 
-                              variant="secondary" 
-                              className="text-xs capitalize bg-accent/10 text-accent border-0"
-                            >
-                              {item.category}
-                            </Badge>
-                          </div>
-                          <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
-                            {item.title}
-                          </h3>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </DialogTrigger>
-              
-              <DialogContent className="max-w-4xl w-full">
-                <div className="aspect-video w-full">
-                  {item.type === "video" ? (
-                    <div className="w-full h-full bg-black/90 rounded-lg flex items-center justify-center">
-                      <Video className="h-16 w-16 text-white/50" />
-                      <span className="ml-4 text-white">Video Player Placeholder</span>
-                    </div>
-                  ) : (
-                    <img
-                      src={item.thumbnail}
-                      alt={item.title}
-                      className="w-full h-full object-cover rounded-lg"
-                    />
-                  )}
-                </div>
-                <div className="pt-4">
-                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                  <div className="flex gap-2">
-                    <Badge variant="outline">{item.year}</Badge>
-                    <Badge variant="secondary" className="capitalize">{item.category}</Badge>
-                  </div>
-                </div>
-                  </DialogContent>
-                </Dialog>
-              )}
-            </div>
-          ))}
-        </div>
-
-        {/* Load More Button */}
-        <div className="text-center mt-12 animate-slide-up-fade">
-          <Button 
-            size="lg" 
-            variant="outline"
-            className="border-primary/30 hover:bg-primary/10 text-primary"
+        {/* 2025 Gallery Cards */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {/* Main 2025 Folder */}
+          <Card 
+            className="group cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-slide-up-fade"
+            onClick={() => window.open('https://drive.google.com/drive/folders/1GOtn_DybOUX1qzoCo5FE2er1lyywpyIl?usp=drive_link', '_blank')}
           >
-            Load More Memories
-          </Button>
+            <div className="aspect-square bg-gradient-to-br from-primary/20 to-secondary/20 rounded-t-lg flex flex-col items-center justify-center p-6 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <Calendar className="h-12 w-12 text-primary mb-4 group-hover:scale-110 transition-transform" />
+              <h3 className="text-xl font-bold text-center text-primary">2025</h3>
+              <p className="text-sm text-muted-foreground text-center mt-2">All Folders</p>
+            </div>
+            <CardContent className="p-4">
+              <p className="text-sm text-muted-foreground text-center">
+                Complete collection of 2025 celebration memories
+              </p>
+            </CardContent>
+          </Card>
+
+          {/* Lord Ganesh Procession */}
+          <Card 
+            className="group cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-slide-up-fade"
+            onClick={() => window.open('https://drive.google.com/drive/folders/1le9eXr9st_z6vxWKjkjap3L0-kN6WIc6?usp=drive_link', '_blank')}
+            style={{ animationDelay: '0.1s' }}
+          >
+            <div className="aspect-square bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-t-lg flex flex-col items-center justify-center p-6 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <FolderOpen className="h-12 w-12 text-orange-600 mb-4 group-hover:scale-110 transition-transform" />
+              <h3 className="text-lg font-bold text-center text-orange-600">Lord Ganesh</h3>
+              <p className="text-sm text-muted-foreground text-center mt-2">Procession</p>
+            </div>
+            <CardContent className="p-4">
+              <p className="text-sm text-muted-foreground text-center">
+                Sacred procession moments and divine blessings
+              </p>
+            </CardContent>
+          </Card>
+
+          {/* Festival Highlights */}
+          <Card 
+            className="group cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-slide-up-fade"
+            onClick={() => window.open('https://drive.google.com/drive/folders/12pWPYW5kK_5HeKT3vPnnvskCuAXLXt6J?usp=drive_link', '_blank')}
+            style={{ animationDelay: '0.2s' }}
+          >
+            <div className="aspect-square bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-t-lg flex flex-col items-center justify-center p-6 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <Star className="h-12 w-12 text-green-600 mb-4 group-hover:scale-110 transition-transform" />
+              <h3 className="text-lg font-bold text-center text-green-600">Festival</h3>
+              <p className="text-sm text-muted-foreground text-center mt-2">Highlights</p>
+            </div>
+            <CardContent className="p-4">
+              <p className="text-sm text-muted-foreground text-center">
+                Special celebration moments and cultural programs
+              </p>
+            </CardContent>
+          </Card>
+
+          {/* Youth Photos */}
+          <Card 
+            className="group cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-slide-up-fade"
+            onClick={() => window.open('https://drive.google.com/drive/folders/1V8CEqVTPDieo2w_14OR5ZSTIQUQ6E2Cp?usp=drive_link', '_blank')}
+            style={{ animationDelay: '0.3s' }}
+          >
+            <div className="aspect-square bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-t-lg flex flex-col items-center justify-center p-6 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <Camera className="h-12 w-12 text-purple-600 mb-4 group-hover:scale-110 transition-transform" />
+              <h3 className="text-lg font-bold text-center text-purple-600">Youth</h3>
+              <p className="text-sm text-muted-foreground text-center mt-2">Photos</p>
+            </div>
+            <CardContent className="p-4">
+              <p className="text-sm text-muted-foreground text-center">
+                Our dynamic team in action and behind-the-scenes
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Upload Section */}
+        <div className="mt-16 text-center">
+          <Card className="bg-gradient-to-r from-primary/5 to-secondary/5 border-primary/20">
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold text-primary mb-4">Share Your Memories</h3>
+              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                Have photos or videos from our celebrations? Share them with us to be included in our gallery!
+              </p>
+              <div className="flex flex-wrap gap-4 justify-center">
+                <Button 
+                  variant="default" 
+                  className="bg-gradient-to-r from-primary to-secondary"
+                >
+                  <Camera className="h-4 w-4 mr-2" />
+                  Submit Photos
+                </Button>
+                <Button variant="outline">
+                  <Users className="h-4 w-4 mr-2" />
+                  Contact Us
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

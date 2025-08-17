@@ -21,11 +21,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 primary-gradient rounded-full flex items-center justify-center animate-glow">
-              <span className="text-primary-foreground font-bold text-lg">V</span>
+            <div className="w-10 h-10 rounded-full overflow-hidden animate-glow">
+              <img src="/lovable-uploads/8ba3e079-5beb-41da-8dea-69962d72ab15.png" alt="Hanuman Youth Association" className="w-full h-full object-cover" />
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-primary text-sm sm:text-base">VARAHI YOUTH</span>
+              <span className="font-bold text-primary text-sm sm:text-base">HANUMAN YOUTH</span>
               <span className="text-xs text-muted-foreground">ASSOCIATION</span>
             </div>
           </div>

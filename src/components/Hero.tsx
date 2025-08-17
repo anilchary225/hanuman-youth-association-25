@@ -18,7 +18,7 @@ const Hero = () => {
         {/* Main Title */}
         <div className="animate-slide-up-fade">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6">
-            <span className="block text-white mb-2">VARAHI YOUTH</span>
+            <span className="block text-white mb-2">HANUMAN YOUTH</span>
             <span className="block text-accent animate-glow">ASSOCIATION</span>
           </h1>
           

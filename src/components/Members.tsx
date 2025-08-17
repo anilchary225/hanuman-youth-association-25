@@ -30,10 +30,22 @@ const Members = () => {
     }
   ];
 
-  const youthMembers = [
-    "Balu Yadav", "Prashanth Goud", "Ravi Goud", "Shiva Chary", "Sai Yadav",
-    "Praveen Chary", "Sathish Yadav", "Anil Chary", "Mahesh Yadav", "Ajay Yadav",
-    "Chanti Yadav", "Bunny Rajak", "Akhil Yadav", "Laddu Yadav", "ManiKanta Yadav"
+  const youthLeaders = [
+    { name: "Balu Yadav", image: "/placeholder.svg" },
+    { name: "Prashanth Goud", image: "/placeholder.svg" },
+    { name: "Ravi Goud", image: "/placeholder.svg" },
+    { name: "Shiva Chary", image: "/placeholder.svg" },
+    { name: "Sai Yadav", image: "/placeholder.svg" },
+    { name: "Praveen Chary", image: "/placeholder.svg" },
+    { name: "Sathish Yadav", image: "/placeholder.svg" },
+    { name: "Anil Chary", image: "/placeholder.svg" },
+    { name: "Mahesh Yadav", image: "/placeholder.svg" },
+    { name: "Ajay Yadav", image: "/placeholder.svg" },
+    { name: "Chanti Yadav", image: "/placeholder.svg" },
+    { name: "Bunny Rajak", image: "/placeholder.svg" },
+    { name: "Akhil Yadav", image: "/placeholder.svg" },
+    { name: "Laddu Yadav", image: "/placeholder.svg" },
+    { name: "ManiKanta Yadav", image: "/placeholder.svg" }
   ];
 
   return (
@@ -44,11 +56,12 @@ const Members = () => {
             Our Youth Leaders
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Meet our core team leaders from our 20-50 member strong youth association
+            Meet our dedicated leadership team and youth leaders from our growing community
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Core Leadership Team */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {coreMembers.map((member, index) => {
             const IconComponent = member.icon;
             return (
@@ -114,20 +127,36 @@ const Members = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-            {youthMembers.map((member, index) => (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            {youthLeaders.map((member, index) => (
               <Card 
-                key={member}
-                className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-none bg-gradient-to-br from-white to-primary/5 dark:from-gray-900 dark:to-primary/10 animate-slide-up-fade"
+                key={member.name}
+                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-none bg-gradient-to-br from-white to-primary/5 dark:from-gray-900 dark:to-primary/10 animate-slide-up-fade"
                 style={{ animationDelay: `${(index + 3) * 0.05}s` }}
               >
-                <CardContent className="p-4 text-center">
-                  <div className="w-12 h-12 mx-auto rounded-full bg-gradient-to-r from-primary to-secondary p-1 mb-3">
-                    <div className="w-full h-full rounded-full bg-muted flex items-center justify-center">
-                      <Users className="h-6 w-6 text-primary" />
+                <CardContent className="p-6 text-center">
+                  {/* Profile Image */}
+                  <div className="relative mb-4">
+                    <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-r from-primary to-secondary p-1">
+                      <div className="w-full h-full rounded-full bg-muted flex items-center justify-center overflow-hidden">
+                        <img 
+                          src={member.image} 
+                          alt={member.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
                     </div>
                   </div>
-                  <h4 className="text-sm font-semibold text-foreground leading-tight">{member}</h4>
+
+                  {/* Member Info */}
+                  <h3 className="text-lg font-bold text-foreground mb-1">{member.name}</h3>
+                  <Badge variant="secondary" className="mb-3 bg-gradient-to-r from-primary/10 to-secondary/10">
+                    Youth Leader
+                  </Badge>
+                  
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Dedicated member contributing to our community celebrations
+                  </p>
                 </CardContent>
               </Card>
             ))}

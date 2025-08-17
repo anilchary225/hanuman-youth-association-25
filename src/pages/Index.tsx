@@ -7,10 +7,12 @@ import Members from "@/components/Members"
 import Announcements from "@/components/Announcements"
 import Contact from "@/components/Contact"
 import Footer from "@/components/Footer"
+import AnnouncementPopup from "@/components/AnnouncementPopup"
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <AnnouncementPopup />
       <Header />
       <main>
         <Hero />

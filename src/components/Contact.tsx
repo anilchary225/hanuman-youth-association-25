@@ -21,13 +21,13 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      info: "contact@varahiyouth.org",
-      link: "mailto:contact@varahiyouth.org"
+      info: "hanumanyouthassociation25@gmail.com",
+      link: "mailto:hanumanyouthassociation25@gmail.com"
     }
   ]
 
   const socialLinks = [
-    { icon: Instagram, label: "Instagram", link: "#", color: "hover:text-pink-500" },
+    { icon: Instagram, label: "Instagram", link: "https://www.instagram.com/varahi_youth_association_2k25", color: "hover:text-pink-500" },
     { icon: Facebook, label: "Facebook", link: "#", color: "hover:text-blue-600" },
     { icon: Youtube, label: "YouTube", link: "#", color: "hover:text-red-500" },
   ]

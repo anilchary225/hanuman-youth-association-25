@@ -4,47 +4,17 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 const Timeline = () => {
   const events = [
     {
-      year: "2024",
-      title: "Ganesh Chaturthi Celebration",
-      date: "September 7-17, 2024",
-      location: "Community Hall, Varahi",
-      participants: "150+ Youth Members",
+      year: "2025",
+      title: "Ganesh Chaturthi Celebration - New Beginning",
+      date: "Starting January 2025",
+      location: "Community Mandapam, RachaBanda, Akanpally village",
+      participants: "Growing Youth Community",
       highlights: [
-        "Grand Ganesh idol installation ceremony",
-        "10-day cultural program with daily activities",
-        "Traditional dance and music performances",
-        "Community feast and prasadam distribution",
-        "Eco-friendly visarjan procession"
-      ],
-      image: "/placeholder.svg"
-    },
-    {
-      year: "2023",
-      title: "Ganesh Chaturthi Celebration",
-      date: "August 19-31, 2023",
-      location: "Community Hall, Varahi",
-      participants: "120+ Youth Members",
-      highlights: [
-        "Sustainable celebration with clay idol",
-        "Youth talent showcase program",
-        "Social service drives during festival",
-        "Cultural workshops for children",
-        "Grand finale with traditional procession"
-      ],
-      image: "/placeholder.svg"
-    },
-    {
-      year: "2022",
-      title: "Ganesh Chaturthi Celebration",
-      date: "August 31 - September 9, 2022",
-      location: "Community Hall, Varahi",
-      participants: "100+ Youth Members",
-      highlights: [
-        "First post-pandemic celebration",
-        "Digital participation options",
-        "Health safety protocols maintained",
-        "Virtual darshan live streaming",
-        "Eco-conscious celebration theme"
+        "Logo inauguration ceremony marking our official beginning",
+        "First-ever organized celebration under Hanuman Youth Association",
+        "Community mobilization and team formation",
+        "Traditional values with modern organization",
+        "Building lasting relationships and memories"
       ],
       image: "/placeholder.svg"
     }
