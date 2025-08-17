@@ -105,12 +105,12 @@ const Members = () => {
           })}
         </div>
 
-        {/* Youth Members Grid */}
+        {/* Youth Leaders Grid */}
         <div className="mt-16">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-primary mb-4">Youth Members</h3>
+            <h3 className="text-3xl font-bold text-primary mb-4">Youth Leaders</h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Our dedicated youth members who make every celebration possible
+              Our dedicated youth leaders who make every celebration possible
             </p>
           </div>
           

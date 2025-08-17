@@ -7,8 +7,20 @@ const Announcements = () => {
   const announcements = [
     {
       id: 1,
+      type: "urgent",
+      title: "Logo Inauguration - 2025 Ganesh Festival Works",
+      description: "గుర్తు ప్రారంభోత్సవం - Our 2025 Ganesh festival works are beginning! We invite all kind-hearted youth members to gather at our Mandapam for this auspicious occasion. Let's start this year's preparations with divine blessings.",
+      date: "2025-01-20",
+      time: "6:00 PM",
+      location: "Community Mandapam, RachaBanda, Akanpally village",
+      category: "Inauguration",
+      priority: "high",
+      icon: Megaphone
+    },
+    {
+      id: 2,
       type: "upcoming",
-      title: "Ganesh Chaturthi 2024 Planning Meeting",
+      title: "Ganesh Chaturthi 2025 Planning Meeting",
       description: "Join us for the annual planning meeting to discuss this year's celebration. We'll cover budget, decorations, cultural programs, and volunteer assignments.",
       date: "2024-08-25",
       time: "6:00 PM",
@@ -18,7 +30,7 @@ const Announcements = () => {
       icon: Users
     },
     {
-      id: 2,
+      id: 3,
       type: "event",
       title: "Eco-Friendly Ganesh Idol Making Workshop",
       description: "Learn to create beautiful clay Ganesh idols using sustainable materials. Workshop includes all supplies and expert guidance from local artisans.",
@@ -30,7 +42,7 @@ const Announcements = () => {
       icon: Star
     },
     {
-      id: 3,
+      id: 4,
       type: "social",
       title: "Community Clean-up Drive",
       description: "As part of our social responsibility initiative, we're organizing a community clean-up drive before the festival begins. Together, let's make our neighborhood beautiful!",
@@ -42,7 +54,7 @@ const Announcements = () => {
       icon: Bell
     },
     {
-      id: 4,
+      id: 5,
       type: "urgent",
       title: "Volunteer Registration Open",
       description: "We need enthusiastic volunteers for decoration, food service, cultural programs, and crowd management. Register now to be part of the celebration team!",

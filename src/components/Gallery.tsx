@@ -3,15 +3,42 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
-import { Camera, Video, Download, Filter, Calendar } from "lucide-react"
+import { Camera, Video, Download, Filter, Calendar, FolderOpen } from "lucide-react"
 
 const Gallery = () => {
   const [activeFilter, setActiveFilter] = useState("all")
   
-  // Sample gallery data - In real implementation, this would come from Google Drive
+  // Gallery data with Google Drive integration
   const galleryItems = [
     { 
       id: 1, 
+      type: "folder", 
+      year: "2025", 
+      title: "Lord Ganesh Procession 2025", 
+      thumbnail: "https://images.unsplash.com/photo-1605379399642-870262d3d051?w=400&h=300&fit=crop",
+      category: "procession",
+      link: "https://drive.google.com/drive/folders/1CRhDwR9C70cXuXgcmlqgPdTAV2Cq7zB9?usp=drive_link"
+    },
+    { 
+      id: 2, 
+      type: "folder", 
+      year: "2025", 
+      title: "Festival Highlights 2025", 
+      thumbnail: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop",
+      category: "celebration",
+      link: "https://drive.google.com/drive/folders/1R4-rh207TD3eYaqcflSID_uFkU8p5c8N?usp=drive_link"
+    },
+    { 
+      id: 3, 
+      type: "folder", 
+      year: "2025", 
+      title: "Youth Photos 2025", 
+      thumbnail: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop",
+      category: "youth",
+      link: "https://drive.google.com/drive/folders/1jxmslx3yKk5HtFJs40csciaBxfCd2qr0?usp=drive_link"
+    },
+    { 
+      id: 4, 
       type: "photo", 
       year: "2024", 
       title: "Ganesh Procession 2024", 
@@ -19,7 +46,7 @@ const Gallery = () => {
       category: "procession"
     },
     { 
-      id: 2, 
+      id: 5, 
       type: "photo", 
       year: "2024", 
       title: "Community Prayers", 
@@ -27,7 +54,7 @@ const Gallery = () => {
       category: "prayer"
     },
     { 
-      id: 3, 
+      id: 6, 
       type: "video", 
       year: "2023", 
       title: "Festival Highlights 2023", 
@@ -35,7 +62,7 @@ const Gallery = () => {
       category: "celebration"
     },
     { 
-      id: 4, 
+      id: 7, 
       type: "photo", 
       year: "2023", 
       title: "Decoration Ceremony", 
@@ -43,7 +70,7 @@ const Gallery = () => {
       category: "decoration"
     },
     { 
-      id: 5, 
+      id: 8, 
       type: "photo", 
       year: "2024", 
       title: "Youth Volunteers", 
@@ -51,7 +78,7 @@ const Gallery = () => {
       category: "volunteers"
     },
     { 
-      id: 6, 
+      id: 9, 
       type: "video", 
       year: "2024", 
       title: "Aarti Ceremony", 
@@ -60,8 +87,8 @@ const Gallery = () => {
     }
   ]
 
-  const years = ["all", "2024", "2023", "2022"]
-  const categories = ["all", "procession", "prayer", "celebration", "decoration", "volunteers"]
+  const years = ["all", "2025", "2024", "2023", "2022"]
+  const categories = ["all", "procession", "prayer", "celebration", "decoration", "volunteers", "youth"]
 
   const filteredItems = galleryItems.filter(item => {
     if (activeFilter === "all") return true
@@ -111,11 +138,12 @@ const Gallery = () => {
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredItems.map((item, index) => (
-            <Dialog key={item.id}>
-              <DialogTrigger asChild>
+            <div key={item.id}>
+              {item.type === "folder" ? (
                 <Card 
                   className="group cursor-pointer overflow-hidden hover:scale-105 transition-all duration-300 card-shadow border-primary/20 hover:border-primary/40 animate-slide-up-fade"
                   style={{ animationDelay: `${index * 0.1}s` }}
+                  onClick={() => window.open(item.link, '_blank')}
                 >
                   <CardContent className="p-0 relative">
                     <div className="aspect-video relative overflow-hidden">
@@ -128,11 +156,7 @@ const Gallery = () => {
                       {/* Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <div className="absolute top-4 right-4">
-                          {item.type === "video" ? (
-                            <Video className="h-6 w-6 text-white" />
-                          ) : (
-                            <Camera className="h-6 w-6 text-white" />
-                          )}
+                          <FolderOpen className="h-6 w-6 text-white" />
                         </div>
                         
                         <div className="absolute bottom-4 right-4">
@@ -141,10 +165,10 @@ const Gallery = () => {
                             variant="secondary"
                             onClick={(e) => {
                               e.stopPropagation()
-                              // Handle download
+                              window.open(item.link, '_blank')
                             }}
                           >
-                            <Download className="h-4 w-4" />
+                            <FolderOpen className="h-4 w-4" />
                           </Button>
                         </div>
                       </div>
@@ -168,7 +192,65 @@ const Gallery = () => {
                     </div>
                   </CardContent>
                 </Card>
-              </DialogTrigger>
+              ) : (
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Card 
+                      className="group cursor-pointer overflow-hidden hover:scale-105 transition-all duration-300 card-shadow border-primary/20 hover:border-primary/40 animate-slide-up-fade"
+                      style={{ animationDelay: `${index * 0.1}s` }}
+                    >
+                      <CardContent className="p-0 relative">
+                        <div className="aspect-video relative overflow-hidden">
+                          <img
+                            src={item.thumbnail}
+                            alt={item.title}
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                          />
+                          
+                          {/* Overlay */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div className="absolute top-4 right-4">
+                              {item.type === "video" ? (
+                                <Video className="h-6 w-6 text-white" />
+                              ) : (
+                                <Camera className="h-6 w-6 text-white" />
+                              )}
+                            </div>
+                            
+                            <div className="absolute bottom-4 right-4">
+                              <Button
+                                size="sm"
+                                variant="secondary"
+                                onClick={(e) => {
+                                  e.stopPropagation()
+                                  // Handle download
+                                }}
+                              >
+                                <Download className="h-4 w-4" />
+                              </Button>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div className="p-4">
+                          <div className="flex items-center justify-between mb-2">
+                            <Badge variant="outline" className="text-xs border-primary/30 text-primary">
+                              {item.year}
+                            </Badge>
+                            <Badge 
+                              variant="secondary" 
+                              className="text-xs capitalize bg-accent/10 text-accent border-0"
+                            >
+                              {item.category}
+                            </Badge>
+                          </div>
+                          <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                            {item.title}
+                          </h3>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </DialogTrigger>
               
               <DialogContent className="max-w-4xl w-full">
                 <div className="aspect-video w-full">
@@ -192,8 +274,10 @@ const Gallery = () => {
                     <Badge variant="secondary" className="capitalize">{item.category}</Badge>
                   </div>
                 </div>
-              </DialogContent>
-            </Dialog>
+                  </DialogContent>
+                </Dialog>
+              )}
+            </div>
           ))}
         </div>
 
