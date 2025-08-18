@@ -46,7 +46,7 @@ const Members = () => {
     { name: "Praveen", image: "/lovable-uploads/members_profiles/spraveen.jpeg" },
     { name: "Srikanth", image: "/lovable-uploads/members_profiles/" },
     { name: "Sai Yadav", image: "/lovable-uploads/members_profiles/sai.jpeg" },
-    { name: "Bhaskar Goud", image: "/lovable-uploads/members_profiles/shivachary.jpeg" },
+    { name: "Bhaskar Goud", image: "/lovable-uploads/members_profiles/bhaskar.jpeg" },
     { name: "Prashanth", image: "/lovable-uploads/members_profiles/prashu.jpeg" },
     { name: "Praveen Chary", image: "/lovable-uploads/members_profiles/praveen.jpeg" },
     { name: "Sathish Yadav", image: "/lovable-uploads/members_profiles/sathish.jpeg" },
