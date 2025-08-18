@@ -61,7 +61,7 @@ const Contact = () => {
                       <h3 className="font-semibold text-foreground mb-1">{item.title}</h3>
                       <a
                         href={item.link}
-                        className="text-muted-foreground hover:text-primary transition-colors"
+                        className="text-muted-foreground hover:text-primary transition-colors break-all whitespace-pre-wrap block"
                       >
                         {item.info}
                       </a>
