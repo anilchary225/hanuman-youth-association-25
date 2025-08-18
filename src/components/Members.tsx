@@ -2,10 +2,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Crown, Heart, Users, Sparkles } from "lucide-react";
 
+
 const Members = () => {
   const coreMembers = [
     {
-      name: "Chennakesava Goud",
+      name: "Chennakeshwar Goud",
       role: "Youth President",
       icon: Crown,
       description: "Leading our association with dedication to Ganesh Chaturthi celebrations",
@@ -31,21 +32,36 @@ const Members = () => {
   ];
 
   const youthLeaders = [
-    { name: "Balu Yadav", image: "/placeholder.svg" },
-    { name: "Prashanth Goud", image: "/placeholder.svg" },
-    { name: "Ravi Goud", image: "/placeholder.svg" },
-    { name: "Shiva Chary", image: "/placeholder.svg" },
-    { name: "Sai Yadav", image: "/placeholder.svg" },
-    { name: "Praveen Chary", image: "/placeholder.svg" },
-    { name: "Sathish Yadav", image: "/placeholder.svg" },
-    { name: "Anil Chary", image: "/placeholder.svg" },
-    { name: "Mahesh Yadav", image: "/placeholder.svg" },
-    { name: "Chanti Yadav", image: "/placeholder.svg" },
-    { name: "Bunny Rajak", image: "/placeholder.svg" },
-    { name: "Ajay Yadav", image: "/placeholder.svg" },
-    { name: "Akhil Yadav", image: "/placeholder.svg" },
-    { name: "Laddu Yadav", image: "/placeholder.svg" },
-    { name: "ManiKanta Yadav", image: "/placeholder.svg" }
+    { name: "Laxman", image: "/lovable-uploads/members_profiles/" },
+    { name: "Narshimha", image: "/lovable-uploads/members_profiles/" },
+    { name: "BalaKrishna Yadav", image: "/lovable-uploads/members_profiles/balu.jpeg" },
+    { name: "Srikanth Goud", image: "/lovable-uploads/members_profiles/" },
+    { name: "Naresh Goud", image: "/lovable-uploads/members_profiles/naresh.jpeg" },
+    { name: "Shiva Chary", image: "/lovable-uploads/members_profiles/shivachary.jpeg" },
+    { name: "Prashanth Goud", image: "/lovable-uploads/members_profiles/prashanth.jpeg" },
+    { name: "Ravi Goud", image: "/lovable-uploads/members_profiles/raviteja.jpeg" },
+    { name: "Shiva Goud", image: "/lovable-uploads/members_profiles/shivagoud.jpeg" },
+    { name: "Raghavendar", image: "/lovable-uploads/members_profiles/raghavendar.jpeg" },
+    { name: "M shiva goud", image: "/lovable-uploads/members_profiles/" },
+    { name: "Praveen", image: "/lovable-uploads/members_profiles/spraveen.jpeg" },
+    { name: "Srikanth", image: "/lovable-uploads/members_profiles/" },
+    { name: "Sai Yadav", image: "/lovable-uploads/members_profiles/sai.jpeg" },
+    { name: "Bhaskar Goud", image: "/lovable-uploads/members_profiles/shivachary.jpeg" },
+    { name: "Prashanth", image: "/lovable-uploads/members_profiles/prashu.jpeg" },
+    { name: "Praveen Chary", image: "/lovable-uploads/members_profiles/praveen.jpeg" },
+    { name: "Sathish Yadav", image: "/lovable-uploads/members_profiles/sathish.jpeg" },
+    { name: "Anil Chary", image: "/lovable-uploads/members_profiles/anilchary.jpg" },
+    { name: "Mahesh Yadav", image: "/lovable-uploads/members_profiles/mahesh.jpeg" },
+    { name: "Ajay Yadav", image: "/lovable-uploads/members_profiles/anilchary.jpg" },
+    { name: "Chanti Yadav", image: "/lovable-uploads/members_profiles/chanti.jpeg" },
+    { name: "Akhilesh Goud", image: "/lovable-uploads/members_profiles/akhilesh.jpeg" },
+    { name: "Bunny Rajak", image: "/lovable-uploads/members_profiles/bunny.jpeg" },
+    { name: "Deepak", image: "/lovable-uploads/members_profiles/deepak.jpeg" },
+    { name: "Manikanta", image: "/lovable-uploads/members_profiles/manikanta2.jpeg" },
+    { name: "Akhil Yadav", image: "/lovable-uploads/members_profiles/akhil.jpeg" },
+    { name: "Laddu Yadav", image: "/lovable-uploads/members_profiles/laddu.jpeg" },
+    { name: "Anil Rajak", image: "/lovable-uploads/members_profiles/laddu.jpeg" },
+    { name: "ManiKanta Yadav", image: "/lovable-uploads/members_profiles/" },
   ];
 
   return (
