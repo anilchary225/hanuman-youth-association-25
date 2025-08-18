@@ -44,18 +44,19 @@ const Hero = () => {
           <Button 
             variant="outline" 
             size="lg"
-            className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-8 py-3 text-lg hover:scale-105 transition-transform duration-300"
+            className="border-white/30 text-black dark:text-white hover:bg-white/10 backdrop-blur-sm px-8 py-3 text-lg hover:scale-105 transition-transform duration-300"
             onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Learn More
           </Button>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce-gentle">
-          <ArrowDown className="h-6 w-6 text-white/70" />
-        </div>
+        
       </div>
+      {/* Scroll Indicator
+      <div className="absolute bottom  border  left-1/2 transform -translate-x-1/2 animate-bounce-gentle">
+          <ArrowDown className="h-6 w-6 text-white/70" />
+        </div> */}
 
       {/* Decorative Elements */}
       <div className="absolute top-10 left-10 w-20 h-20 rounded-full primary-gradient opacity-20 animate-float"></div>

@@ -10,13 +10,13 @@ const Contact = () => {
       icon: MapPin,
       title: "Location",
       info: "Mandapam at RachaBanda, Akanpally village, Maheshwaram Mandal, Ranga Reddy Dist, Telangana - 509325",
-      link: "#"
+      link: "https://www.google.com/maps/dir//17.0871084,78.3909886/@17.0871603,78.3909778,85m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D"
     },
     {
       icon: Phone,
       title: "Phone",
-      info: "+91 98765 43210",
-      link: "tel:+919876543210"
+      info: "+91 96767 71776",
+      link: "tel:+919676771776"
     },
     {
       icon: Mail,
@@ -60,7 +60,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">{item.title}</h3>
-                      <a 
+                      <a
                         href={item.link}
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
@@ -102,12 +102,17 @@ const Contact = () => {
             {/* Map Placeholder */}
             <Card className="card-gradient border-primary/20 card-shadow">
               <CardContent className="p-0">
-                <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-                  <div className="text-center text-muted-foreground">
-                    <MapPin className="h-12 w-12 mx-auto mb-4" />
-                    <p>Interactive Map Coming Soon</p>
-                  </div>
-                </div>
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.148738285056!2d78.390841!3d17.0870667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99a1b1111111%3A0x2222222222222222!2sAkanpally%20Village%2C%20Maheshwaram%20Mandal!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
               </CardContent>
             </Card>
           </div>

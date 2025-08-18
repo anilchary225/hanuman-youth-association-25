@@ -40,9 +40,9 @@ const Members = () => {
     { name: "Sathish Yadav", image: "/placeholder.svg" },
     { name: "Anil Chary", image: "/placeholder.svg" },
     { name: "Mahesh Yadav", image: "/placeholder.svg" },
-    { name: "Ajay Yadav", image: "/placeholder.svg" },
     { name: "Chanti Yadav", image: "/placeholder.svg" },
     { name: "Bunny Rajak", image: "/placeholder.svg" },
+    { name: "Ajay Yadav", image: "/placeholder.svg" },
     { name: "Akhil Yadav", image: "/placeholder.svg" },
     { name: "Laddu Yadav", image: "/placeholder.svg" },
     { name: "ManiKanta Yadav", image: "/placeholder.svg" }
@@ -53,7 +53,7 @@ const Members = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-slide-up-fade">
           <h2 className="text-4xl font-bold text-primary mb-4">
-            Our Youth Leaders
+            Youth Presidents
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Meet our dedicated leadership team and youth leaders from our growing community
@@ -121,7 +121,7 @@ const Members = () => {
         {/* Youth Leaders Grid */}
         <div className="mt-16">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-primary mb-4">Youth Leaders</h3>
+            <h3 className="text-3xl font-bold text-primary mb-4">Youth Leaders and Members</h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Our dedicated youth leaders who make every celebration possible
             </p>
@@ -151,7 +151,7 @@ const Members = () => {
                   {/* Member Info */}
                   <h3 className="text-lg font-bold text-foreground mb-1">{member.name}</h3>
                   <Badge variant="secondary" className="mb-3 bg-gradient-to-r from-primary/10 to-secondary/10">
-                    Youth Leader
+                    Youth Member
                   </Badge>
                   
                   <p className="text-muted-foreground text-sm leading-relaxed">

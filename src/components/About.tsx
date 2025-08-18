@@ -30,7 +30,7 @@ const About = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-slide-up-fade">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-            About <span className="text-gradient">Varahi Youth Association</span>
+            About <span className="text-gradient">Hanuman Youth Association</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             We are a vibrant community of dedicated youth committed to celebrating and preserving 
@@ -65,7 +65,7 @@ const About = () => {
             <div className="space-y-6">
               <h3 className="text-2xl lg:text-3xl font-bold text-primary">Our Mission</h3>
               <p className="text-muted-foreground leading-relaxed">
-                The Varahi Youth Association was founded with the sacred mission of bringing together 
+                The Hanuman Youth Association was founded with the sacred mission of bringing together 
                 young devotees to celebrate Lord Ganesha's divine presence in our lives. Through our 
                 annual Ganesh Chaturthi celebrations, we create lasting bonds, preserve cultural 
                 traditions, and spread the message of unity and devotion.

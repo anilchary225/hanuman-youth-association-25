@@ -34,7 +34,7 @@ const Timeline = () => {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-primary to-primary/30 hidden md:block"></div>
+          
 
           <div className="space-y-12">
             {events.map((event, index) => (

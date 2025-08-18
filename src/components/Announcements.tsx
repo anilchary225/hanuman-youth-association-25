@@ -19,42 +19,6 @@ const Announcements = () => {
     },
     {
       id: 2,
-      type: "upcoming",
-      title: "Ganesh Chaturthi 2025 Planning Meeting",
-      description: "Join us for the annual planning meeting to discuss this year's celebration. We'll cover budget, decorations, cultural programs, and volunteer assignments.",
-      date: "2024-08-25",
-      time: "6:00 PM",
-      location: "Community Hall, Varahi",
-      category: "Meeting",
-      priority: "high",
-      icon: Users
-    },
-    {
-      id: 3,
-      type: "event",
-      title: "Eco-Friendly Ganesh Idol Making Workshop",
-      description: "Learn to create beautiful clay Ganesh idols using sustainable materials. Workshop includes all supplies and expert guidance from local artisans.",
-      date: "2024-08-30",
-      time: "10:00 AM - 4:00 PM",
-      location: "Art Center, Varahi",
-      category: "Workshop",
-      priority: "medium",
-      icon: Star
-    },
-    {
-      id: 4,
-      type: "social",
-      title: "Community Clean-up Drive",
-      description: "As part of our social responsibility initiative, we're organizing a community clean-up drive before the festival begins. Together, let's make our neighborhood beautiful!",
-      date: "2024-09-01",
-      time: "7:00 AM - 11:00 AM",
-      location: "Starting from Community Hall",
-      category: "Social Service",
-      priority: "medium",
-      icon: Bell
-    },
-    {
-      id: 5,
       type: "urgent",
       title: "Volunteer Registration Open",
       description: "We need enthusiastic volunteers for decoration, food service, cultural programs, and crowd management. Register now to be part of the celebration team!",

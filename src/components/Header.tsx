@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/ui/theme-toggle"
+import ganeshLogo from "@/assets/ganeshLogo.png"
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -9,7 +10,7 @@ const Header = () => {
   const navigationItems = [
     { href: "#home", label: "Home" },
     { href: "#about", label: "About Us" },
-    { href: "#events", label: "Events" },
+    { href: "#announcements", label: "Announcements" },
     { href: "#gallery", label: "Gallery" },
     { href: "#members", label: "Members" },
     { href: "#contact", label: "Contact" },
@@ -22,7 +23,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="w-10 h-10 rounded-full overflow-hidden animate-glow">
-              <img src="/lovable-uploads/8ba3e079-5beb-41da-8dea-69962d72ab15.png" alt="Hanuman Youth Association" className="w-full h-full object-cover" />
+              <img src={ganeshLogo} alt="Hanuman Youth Association" className="w-full h-full object-cover" />
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-primary text-sm sm:text-base">HANUMAN YOUTH</span>

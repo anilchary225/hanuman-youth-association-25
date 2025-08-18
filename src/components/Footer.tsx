@@ -7,10 +7,10 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center space-x-2 mb-4 md:mb-0">
             <div className="w-8 h-8 primary-gradient rounded-full flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">V</span>
+              <span className="text-primary-foreground font-bold text-sm">H</span>
             </div>
             <div className="text-center md:text-left">
-              <div className="font-bold text-primary text-sm">VARAHI YOUTH ASSOCIATION</div>
+              <div className="font-bold text-primary text-sm">HANUMAN YOUTH ASSOCIATION</div>
               <div className="text-xs text-muted-foreground">Celebrating Divine Traditions</div>
             </div>
           </div>
@@ -23,8 +23,10 @@ const Footer = () => {
         </div>
         
         <div className="mt-6 pt-6 border-t border-primary/10 text-center text-xs text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Varahi Youth Association. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} HANUMAN Youth Association. All rights reserved.</p>
           <p className="mt-1">గణపతి బాప్పా మోర్య | మంగళమూర్తి మోర్య</p>
+          <p className="mt-1">జై శ్రీ రామ్ | జై హనుమాన్</p>
+
         </div>
       </div>
     </footer>
