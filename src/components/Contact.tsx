@@ -9,7 +9,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Location",
-      info: "Mandapam at RachaBanda, Akanpally village, Maheshwaram Mandal, Ranga Reddy Dist, Telangana - 509325",
+      info: "Lord Ganesh Mandapam at RachaBanda,BC Colony, Akanpally village, Maheshwaram Mandal, Ranga Reddy Dist, Telangana - 509325",
       link: "https://www.google.com/maps/dir//17.0871084,78.3909886/@17.0871603,78.3909778,85m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D"
     },
     {
@@ -27,8 +27,7 @@ const Contact = () => {
   ]
 
   const socialLinks = [
-    { icon: Instagram, label: "Instagram", link: "https://www.instagram.com/varahi_youth_association_2k25", color: "hover:text-pink-500" },
-    { icon: Facebook, label: "Facebook", link: "#", color: "hover:text-blue-600" },
+    { icon: Instagram, label: "Instagram", link: "https://www.instagram.com/hanuman_youth_association_2025", color: "hover:text-pink-500" },
     { icon: Youtube, label: "YouTube", link: "#", color: "hover:text-red-500" },
   ]
 
