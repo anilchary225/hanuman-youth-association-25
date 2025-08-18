@@ -5,9 +5,9 @@ const Timeline = () => {
   const events = [
     {
       year: "2025",
-      title: "Ganesh Chaturthi Celebration - New Beginning",
-      date: "Starting January 2025",
-      location: "Community Mandapam, RachaBanda, Akanpally village",
+      title: "Ganesh Chaturthi Celebration - Beginning",
+      date: "Starting August 27th 2025",
+      location: "Ganesh Mandapam, RachaBanda, BC Colony, Akanpally village",
       participants: "Growing Youth Community",
       highlights: [
         "Logo inauguration ceremony marking our official beginning",

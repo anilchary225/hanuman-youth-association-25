@@ -10,9 +10,9 @@ const Announcements = () => {
       type: "urgent",
       title: "Logo Inauguration - 2025 Ganesh Festival Works",
       description: "గుర్తు ప్రారంభోత్సవం - Our 2025 Ganesh festival works are beginning! We invite all kind-hearted youth members to gather at our Mandapam for this auspicious occasion. Let's start this year's preparations with divine blessings.",
-      date: "2025-01-20",
+      date: "20th August 2025",
       time: "6:00 PM",
-      location: "Community Mandapam, RachaBanda, Akanpally village",
+      location: "Ganesh Mandapam, RachaBanda, BC Colony, Akanpally village",
       category: "Inauguration",
       priority: "high",
       icon: Megaphone

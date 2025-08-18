@@ -96,7 +96,7 @@ const Gallery = () => {
         </div>
 
         {/* Upload Section */}
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <Card className="bg-gradient-to-r from-primary/5 to-secondary/5 border-primary/20">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-primary mb-4">Share Your Memories</h3>
@@ -118,7 +118,7 @@ const Gallery = () => {
               </div>
             </CardContent>
           </Card>
-        </div>
+        </div> */}
       </div>
     </section>
   )

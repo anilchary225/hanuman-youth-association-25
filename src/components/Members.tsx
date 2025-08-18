@@ -42,7 +42,7 @@ const Members = () => {
     { name: "Ravi Goud", image: "/lovable-uploads/members_profiles/raviteja.jpeg" },
     { name: "Shiva Goud", image: "/lovable-uploads/members_profiles/shivagoud.jpeg" },
     { name: "Raghavendar", image: "/lovable-uploads/members_profiles/raghavendar.jpeg" },
-    { name: "M shiva goud", image: "/lovable-uploads/members_profiles/" },
+    { name: "M shiva goud", image: "/lovable-uploads/members_profiles/mshivagoud.jpeg" },
     { name: "Praveen", image: "/lovable-uploads/members_profiles/spraveen.jpeg" },
     { name: "Srikanth", image: "/lovable-uploads/members_profiles/" },
     { name: "Sai Yadav", image: "/lovable-uploads/members_profiles/sai.jpeg" },
@@ -52,16 +52,16 @@ const Members = () => {
     { name: "Sathish Yadav", image: "/lovable-uploads/members_profiles/sathish.jpeg" },
     { name: "Anil Chary", image: "/lovable-uploads/members_profiles/anilchary.jpg" },
     { name: "Mahesh Yadav", image: "/lovable-uploads/members_profiles/mahesh.jpeg" },
-    { name: "Ajay Yadav", image: "/lovable-uploads/members_profiles/anilchary.jpg" },
+    { name: "Ajay Yadav", image: "/lovable-uploads/members_profiles/ajay.jpg" },
     { name: "Chanti Yadav", image: "/lovable-uploads/members_profiles/chanti.jpeg" },
     { name: "Akhilesh Goud", image: "/lovable-uploads/members_profiles/akhilesh.jpeg" },
     { name: "Bunny Rajak", image: "/lovable-uploads/members_profiles/bunny.jpeg" },
     { name: "Deepak", image: "/lovable-uploads/members_profiles/deepak.jpeg" },
     { name: "Manikanta", image: "/lovable-uploads/members_profiles/manikanta2.jpeg" },
     { name: "Akhil Yadav", image: "/lovable-uploads/members_profiles/akhil.jpeg" },
-    { name: "Laddu Yadav", image: "/lovable-uploads/members_profiles/laddu.jpeg" },
+    { name: "Laddu Yadav", image: "/lovable-uploads/members_profiles/laddu2.jpeg" },
     { name: "Anil Rajak", image: "/lovable-uploads/members_profiles/laddu.jpeg" },
-    { name: "ManiKanta Yadav", image: "/lovable-uploads/members_profiles/" },
+    { name: "ManiKanta Yadav", image: "/lovable-uploads/members_profiles/manikanta3.jpeg" },
   ];
 
   return (
@@ -187,7 +187,7 @@ const Members = () => {
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
                 We're always looking for passionate youth who want to contribute to our community and help organize amazing celebrations. Be part of something meaningful!
               </p>
-              <div className="flex flex-wrap gap-4 justify-center">
+              {/* <div className="flex flex-wrap gap-4 justify-center">
                 <Badge variant="secondary" className="px-4 py-2">
                   <Users className="h-4 w-4 mr-2" />
                   Open Positions Available
@@ -196,7 +196,7 @@ const Members = () => {
                   <Heart className="h-4 w-4 mr-2" />
                   Volunteer Opportunities
                 </Badge>
-              </div>
+              </div> */}
             </CardContent>
           </Card>
         </div>

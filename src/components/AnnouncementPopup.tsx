@@ -17,10 +17,8 @@ const AnnouncementPopup = () => {
       localStorage.setItem('announcementShown', today);
     }
   }, []);
-
   const getTomorrowDate = () => {
-    const tomorrow = new Date();
-    tomorrow.setDate(tomorrow.getDate() + 1);
+    const tomorrow = new Date(2025, 7, 20); // August 20, 2025
     return tomorrow.toLocaleDateString('en-IN', { 
       year: 'numeric', 
       month: 'long', 
@@ -81,7 +79,7 @@ const AnnouncementPopup = () => {
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="h-4 w-4" />
-              <span>Community Mandapam, RachaBanda, Akanpally village</span>
+              <span>Ganesh Mandapam, RachaBanda, BC Colony, Akanpally village</span>
             </div>
           </div>
 
