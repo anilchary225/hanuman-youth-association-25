@@ -10,32 +10,33 @@ const Members = () => {
       role: "Youth President",
       icon: Crown,
       description: "Leading our association with dedication to Ganesh Chaturthi celebrations",
-      image: "/placeholder.svg",
+      image: "/lovable-uploads/members_profiles/chenna.jpeg",
       responsibilities: ["Strategic Planning", "Community Relations", "Event Coordination"]
+    },
+    {
+      name: "Thirumalesh Goud",
+      role: "Vice-President",
+      icon: Sparkles,
+      description: "Creative organizer behind our spectacular Ganesh celebrations",
+      image: "/placeholder.svg",
+      responsibilities: ["Event Planning", "Decoration", "Performance Management"]
     },
     {
       name: "Shekhar Yadav",
       role: "Vice-President", 
       icon: Heart,
       description: "Supporting our community initiatives and cultural preservation",
-      image: "/placeholder.svg",
+      image: "/lovable-uploads/members_profiles/shekar.jpeg",
       responsibilities: ["Program Management", "Youth Mentoring", "Cultural Activities"]
-    },
-    {
-      name: "Thirumalesh Goud",
-      role: "Vice-President 2",
-      icon: Sparkles,
-      description: "Creative organizer behind our spectacular Ganesh celebrations",
-      image: "/placeholder.svg",
-      responsibilities: ["Event Planning", "Decoration", "Performance Management"]
     }
+    
   ];
 
   const youthLeaders = [
-    { name: "Laxman", image: "/lovable-uploads/members_profiles/" },
-    { name: "Narshimha", image: "/lovable-uploads/members_profiles/" },
+    // { name: "Laxman", image: "/lovable-uploads/members_profiles/" },
+    // { name: "Narshimha", image: "/lovable-uploads/members_profiles/" },
     { name: "BalaKrishna Yadav", image: "/lovable-uploads/members_profiles/balu.jpeg" },
-    { name: "Srikanth Goud", image: "/lovable-uploads/members_profiles/" },
+    // { name: "Srikanth Goud", image: "/lovable-uploads/members_profiles/" },
     { name: "Naresh Goud", image: "/lovable-uploads/members_profiles/naresh.jpeg" },
     { name: "Shiva Chary", image: "/lovable-uploads/members_profiles/shivachary.jpeg" },
     { name: "Prashanth Goud", image: "/lovable-uploads/members_profiles/prashanth.jpeg" },
@@ -44,9 +45,10 @@ const Members = () => {
     { name: "Raghavendar", image: "/lovable-uploads/members_profiles/raghavendar.jpeg" },
     { name: "M shiva goud", image: "/lovable-uploads/members_profiles/mshivagoud.jpeg" },
     { name: "Praveen", image: "/lovable-uploads/members_profiles/spraveen.jpeg" },
-    { name: "Srikanth", image: "/lovable-uploads/members_profiles/" },
+    // { name: "Srikanth", image: "/lovable-uploads/members_profiles/" },
     { name: "Sai Yadav", image: "/lovable-uploads/members_profiles/sai.jpeg" },
     { name: "Bhaskar Goud", image: "/lovable-uploads/members_profiles/bhaskar.jpeg" },
+    // { name: "Chintu Reddy", image: "/lovable-uploads/members_profiles/bhaskar.jpeg" },
     { name: "Prashanth", image: "/lovable-uploads/members_profiles/prashu.jpeg" },
     { name: "Praveen Chary", image: "/lovable-uploads/members_profiles/praveen.jpeg" },
     { name: "Sathish Yadav", image: "/lovable-uploads/members_profiles/sathish.jpeg" },
@@ -58,10 +60,11 @@ const Members = () => {
     { name: "Bunny Rajak", image: "/lovable-uploads/members_profiles/bunny.jpeg" },
     { name: "Deepak", image: "/lovable-uploads/members_profiles/deepak.jpeg" },
     { name: "Manikanta", image: "/lovable-uploads/members_profiles/manikanta2.jpeg" },
+    { name: "ManiKanta Yadav", image: "/lovable-uploads/members_profiles/manikanta3.jpeg" },
     { name: "Akhil Yadav", image: "/lovable-uploads/members_profiles/akhil.jpeg" },
     { name: "Laddu Yadav", image: "/lovable-uploads/members_profiles/laddu2.jpeg" },
     { name: "Anil Rajak", image: "/lovable-uploads/members_profiles/laddu.jpeg" },
-    { name: "ManiKanta Yadav", image: "/lovable-uploads/members_profiles/manikanta3.jpeg" },
+    
   ];
 
   return (
