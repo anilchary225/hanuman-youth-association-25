@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, MapPin, Users, Megaphone, Star, Bell } from "lucide-react";
+import { Calendar, Clock, MapPin, Users, Megaphone, Star, BellRing,Bell  } from "lucide-react";
 
 const Announcements = () => {
   const announcements = [
@@ -144,20 +144,23 @@ const Announcements = () => {
                 <h3 className="text-2xl font-bold text-primary">Stay Updated!</h3>
               </div>
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                Never miss important announcements! Follow us on Instagram or enable notifications for real-time updates about events, meetings, and opportunities.
+                Never miss important announcements! Follow us on Instagram and Youtube Channel for real-time updates about events, meetings, and opportunities.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Button 
                   variant="default" 
                   className="bg-gradient-to-r from-primary to-secondary"
-                  onClick={() => window.open('https://www.instagram.com/varahi_youth_association_2k25', '_blank')}
+                  onClick={() => window.open('https://www.instagram.com/_team_hya__', '_blank')}
                 >
                   <Megaphone className="h-4 w-4 mr-2" />
                   Follow on Instagram
                 </Button>
-                <Button variant="outline">
-                  <Bell className="h-4 w-4 mr-2" />
-                  Enable Notifications
+                <Button variant="outline"
+                onClick={() => window.open('https://www.youtube.com/@HANUMANYOUTHASSOCIATION', '_blank')}
+
+                >
+                  <BellRing className="h-4 w-4 mr-2" />
+                  Subscribe to YouTube
                 </Button>
               </div>
             </CardContent>

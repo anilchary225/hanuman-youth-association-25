@@ -2,9 +2,56 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { MapPin, Phone, Mail, Instagram, Facebook, Youtube } from "lucide-react"
+import { MapPin, Phone, Mail, Instagram, Youtube } from "lucide-react"
+
+import { useState } from "react";
+import emailjs from "emailjs-com";
+
 
 const Contact = () => {
+
+
+  
+    const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      setForm({ ...form, [e.target.name]: e.target.value });
+    };
+  
+    const handleSubmit = (e: React.FormEvent) => {
+      e.preventDefault();
+  
+      // Basic validation
+      emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          from_email: form.email,
+          subject: form.subject,
+          message: form.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+        .then(
+          () => {
+            alert("✅ Message sent successfully!");
+            setForm({ name: "", email: "", subject: "", message: "" });
+          },
+          (error) => {
+            console.error(error);
+            alert("❌ Failed to send message. Please try again.");
+          }
+        );
+      }
+    
+  
+
+
+
+
+
+
   const contactInfo = [
     {
       icon: MapPin,
@@ -28,7 +75,7 @@ const Contact = () => {
 
   const socialLinks = [
     { icon: Instagram, label: "Instagram", link: "https://www.instagram.com/_team_hya__", color: "hover:text-pink-500" },
-    { icon: Youtube, label: "YouTube", link: "#", color: "hover:text-red-500" },
+    { icon: Youtube, label: "YouTube", link: "https://www.youtube.com/@HANUMANYOUTHASSOCIATION", color: "hover:text-red-500" },
   ]
 
   return (
@@ -86,7 +133,7 @@ const Contact = () => {
                       className={`border-primary/20 hover:scale-110 transition-all duration-300 ${social.color}`}
                       asChild
                     >
-                      <a href={social.link} aria-label={social.label}>
+                      <a href={social.link} target="_blank" aria-label={social.label}>
                         <social.icon className="h-5 w-5" />
                       </a>
                     </Button>
@@ -119,12 +166,12 @@ const Contact = () => {
           {/* Contact Form */}
           <Card className="card-gradient border-primary/20 card-shadow animate-slide-up-fade">
             <CardHeader>
-              <CardTitle className="text-2xl text-primary">Share Your Memories</CardTitle>
+              <CardTitle className="text-2xl text-primary">Contact us</CardTitle>
               <p className="text-muted-foreground">
                 Submit your photos or videos from our celebrations, or just say hello!
               </p>
             </CardHeader>
-            <CardContent className="space-y-6">
+            {/* <CardContent className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">
@@ -178,7 +225,81 @@ const Contact = () => {
               <p className="text-xs text-muted-foreground text-center">
                 Your submissions will be reviewed before being added to our gallery.
               </p>
-            </CardContent>
+            </CardContent> */}
+            <form onSubmit={handleSubmit}>
+              <CardContent className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="text-sm font-medium text-foreground mb-2 block">
+                      Full Name
+                    </label>
+                    <Input 
+                      name="name"
+                      value={form.name}
+                      onChange={handleChange}
+                      placeholder="Your Name" 
+                      className="border-primary/20 focus:border-primary"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="text-sm font-medium text-foreground mb-2 block">
+                      Email
+                    </label>
+                    <Input 
+                      type="email"
+                      name="email"
+                      value={form.email}
+                      onChange={handleChange}
+                      placeholder="your.email@example.com" 
+                      className="border-primary/20 focus:border-primary"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-2 block">
+                    Subject
+                  </label>
+                  <Input 
+                    name="subject"
+                    value={form.subject}
+                    onChange={handleChange}
+                    placeholder="What's this about?" 
+                    className="border-primary/20 focus:border-primary"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-2 block">
+                    Message
+                  </label>
+                  <Textarea 
+                    name="message"
+                    value={form.message}
+                    onChange={handleChange}
+                    placeholder="Share your thoughts, memories, or media links..." 
+                    rows={5}
+                    className="border-primary/20 focus:border-primary resize-none"
+                    required
+                  />
+                </div>
+
+                <Button 
+                  type="submit"
+                  className="w-full primary-gradient text-primary-foreground font-semibold hover:scale-105 transition-transform duration-300 primary-shadow"
+                  size="lg"
+                >
+                  Send Message
+                </Button>
+
+                <p className="text-xs text-muted-foreground text-center">
+                  Your submissions will be reviewed before being added to our gallery.
+                </p>
+              </CardContent>
+            </form>
           </Card>
         </div>
       </div>

@@ -36,7 +36,7 @@ const Timeline = () => {
           {/* Timeline line */}
           
 
-          <div className="space-y-12">
+          <div className="space-y-12 mb-11">
             {events.map((event, index) => (
               <div
                 key={event.year}
@@ -86,6 +86,26 @@ const Timeline = () => {
                 </Card>
               </div>
             ))}
+          </div>
+
+          <div className="text-center mb-16 animate-slide-up-fade">
+            <h2 className="text-4xl font-bold text-primary mb-4">
+              Latest Videos
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <i>🎥 Witness the devotion, energy, and culture of our Ganesh Chaturthi celebrations – captured with love by Hanuman Youth Association. From the beats of the dhol to the blessings of Lord Ganesh, our journey is a blend of tradition and youthful spirit. Relive every divine moment through our official videos.</i>
+            </p>
+          </div>
+
+          <div className="w-full max-w-3xl mx-auto rounded-lg overflow-hidden shadow-lg aspect-video">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/xRSLABptbN8"
+              title="Hanuman Youth Association Logo Reveal"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
           </div>
         </div>
       </div>
