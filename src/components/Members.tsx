@@ -14,21 +14,22 @@ const Members = () => {
       responsibilities: ["Strategic Planning", "Community Relations", "Event Coordination"]
     },
     {
-      name: "Thirumalesh Goud",
-      role: "Vice-President",
-      icon: Sparkles,
-      description: "Creative organizer behind our spectacular Ganesh celebrations",
-      image: "/placeholder.svg",
-      responsibilities: ["Event Planning", "Decoration", "Performance Management"]
-    },
-    {
       name: "Shekhar Yadav",
       role: "Vice-President", 
       icon: Heart,
       description: "Supporting our community initiatives and cultural preservation",
       image: "/lovable-uploads/members_profiles/shekar.jpeg",
       responsibilities: ["Program Management", "Youth Mentoring", "Cultural Activities"]
+    },
+    {
+      name: "Thirumalesh Goud",
+      role: "Vice-President",
+      icon: Sparkles,
+      description: "Creative organizer behind our spectacular Ganesh celebrations",
+      image: "/placeholder.svg",
+      responsibilities: ["Event Planning", "Decoration", "Performance Management"]
     }
+    
     
   ];
 

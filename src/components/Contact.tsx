@@ -27,7 +27,7 @@ const Contact = () => {
   ]
 
   const socialLinks = [
-    { icon: Instagram, label: "Instagram", link: "https://www.instagram.com/hanuman_youth_association_2025", color: "hover:text-pink-500" },
+    { icon: Instagram, label: "Instagram", link: "https://www.instagram.com/_team_hya__", color: "hover:text-pink-500" },
     { icon: Youtube, label: "YouTube", link: "#", color: "hover:text-red-500" },
   ]
 
