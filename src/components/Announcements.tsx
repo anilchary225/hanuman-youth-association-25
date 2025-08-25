@@ -8,12 +8,12 @@ const Announcements = () => {
     {
       id: 1,
       type: "urgent",
-      title: "Logo Inauguration - 2025 Ganesh Festival Works",
-      description: "గుర్తు ప్రారంభోత్సవం - Our 2025 Ganesh festival works are beginning! We invite all kind-hearted youth members to gather at our Mandapam for this auspicious occasion. Let's start this year's preparations with divine blessings.",
-      date: "soon...",
-      time: "6:00 PM",
+      title: "Lord Ganesh Chaturthi Pooja ceremony🙏🏻",
+      description: "భక్తి శ్రద్ధలతో హనుమాన్ యూత్ అసోసియేషన్ ఆధ్వర్యంలో శ్రీ వినాయక స్వామి పూజా కార్యక్రమం 27 ఆగస్టు 2025 న జరగబోతోంది. అందరూ విచ్చేసి, శ్రీ గణేశుడి ఆశీర్వాదాలు పొంది, ఈ శుభకార్యానికి భాగస్వాములు కావాలని మనవి. 🙏✨  ఈ పూజా కార్యక్రమం ద్వారా మన సమాజంలో ఐక్యత, సాంస్కృతిక వారసత్వం, మరియు ఆధ్యాత్మిక విలువలను పెంపొందించుకోవాలని లక్ష్యంగా పెట్టుకున్నాం. ఈ కార్యక్రమంలో పాల్గొని, మీ కుటుంబ సభ్యులు, స్నేహితులు అందరూ ఆహ్వానించబడతారు.",
+      date: "27 Aug 2025",
+      time: "6:00 PM onwards",
       location: "Ganesh Mandapam, RachaBanda, BC Colony, Akanpally village",
-      category: "Inauguration",
+      category: "Pooja Announcement",
       priority: "high",
       icon: Megaphone
     },
@@ -120,7 +120,7 @@ const Announcements = () => {
                     </div>
                   </div>
 
-                  <div className="pt-2">
+                  {/* <div className="pt-2">
                     <Button 
                       variant="outline" 
                       size="sm"
@@ -128,7 +128,7 @@ const Announcements = () => {
                     >
                       Learn More
                     </Button>
-                  </div>
+                  </div> */}
                 </CardContent>
               </Card>
             );
