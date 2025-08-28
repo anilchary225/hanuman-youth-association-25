@@ -44,7 +44,7 @@ const AnnouncementPopup = () => {
                 <div className="flex items-center gap-2 mt-2">
                   <Badge className="bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">
                     <Calendar className="h-3 w-3 inline mr-1" />
-                    27 Aug 2025
+                    Every day
                   </Badge>
                   <Badge variant="outline" className="text-xs bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">
                     Pooja Announcement
@@ -65,15 +65,15 @@ const AnnouncementPopup = () => {
         
         <CardContent className="space-y-4">
           <CardDescription className="text-sm leading-relaxed text-red-700 dark:text-red-300">
-          భక్తి శ్రద్ధలతో <b>హనుమాన్ యూత్ అసోసియేషన్</b> ఆధ్వర్యంలో <b>శ్రీ వినాయక స్వామి పూజా కార్యక్రమం 27 ఆగస్టు 2025 న జరగబోతోంది.</b> అందరూ విచ్చేసి, శ్రీ గణేశుడి ఆశీర్వాదాలు పొంది, ఈ శుభకార్యానికి భాగస్వాములు కావాలని మనవి. 🙏✨          
+          భక్తి శ్రద్ధలతో <b>హనుమాన్ యూత్ అసోసియేషన్</b> ఆధ్వర్యంలో <b>శ్రీ వినాయక స్వామి పూజా కార్యక్రమం జరగబోతోంది.</b> అందరూ విచ్చేసి, శ్రీ గణేశుడి ఆశీర్వాదాలు పొంది, ఈ శుభకార్యానికి భాగస్వాములు కావాలని మనవి. 🙏✨          
           <br />
           <br />
-          With devotion and joy, <b>HANUMAN YOUTH ASSOCIATION</b> is conducting a special <b>LORD GANESH POOJA on 27th August 2025</b>. We warmly invite everyone to join us, take the divine blessings of Lord Ganesh, and be a part of this auspicious occasion. 🙏✨ </CardDescription>
+          With devotion and joy, <b>HANUMAN YOUTH ASSOCIATION</b> is conducting a special <b>LORD GANESH POOJA</b>. We warmly invite everyone to join us, take the divine blessings of Lord Ganesh, and be a part of this auspicious occasion. 🙏✨ </CardDescription>
           <div className="space-y-2 text-sm text-red-600 dark:text-red-400">
             <div className="flex items-center gap-2">
               <Calendar className="h-4 w-4" />
-              <span>{getTomorrowDate()}</span>
-              {/* <span><p></p></span> */}
+              {/* <span>{getTomorrowDate()}</span> */}
+              <span><p>Every Day</p></span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
