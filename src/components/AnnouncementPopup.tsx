@@ -39,16 +39,16 @@ const AnnouncementPopup = () => {
               </div>
               <div>
                 <CardTitle className="text-lg leading-tight text-red-800 dark:text-red-200">
-                Lord Ganesh Chaturthi Pooja ceremony🙏🏻
+                🌺 Ganpati Bappa Morya – See You Next Year! 🌺
                 </CardTitle>
                 <div className="flex items-center gap-2 mt-2">
-                  <Badge className="bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">
+                  {/* <Badge className="bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">
                     <Calendar className="h-3 w-3 inline mr-1" />
-                    Every day
+                    
                   </Badge>
                   <Badge variant="outline" className="text-xs bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">
-                    Pooja Announcement
-                  </Badge>
+                    
+                  </Badge> */}
                 </div>
               </div>
             </div>
@@ -65,20 +65,20 @@ const AnnouncementPopup = () => {
         
         <CardContent className="space-y-4">
           <CardDescription className="text-sm leading-relaxed text-red-700 dark:text-red-300">
-          భక్తి శ్రద్ధలతో <b>హనుమాన్ యూత్ అసోసియేషన్</b> ఆధ్వర్యంలో <b>శ్రీ వినాయక స్వామి పూజా కార్యక్రమం జరగబోతోంది.</b> అందరూ విచ్చేసి, శ్రీ గణేశుడి ఆశీర్వాదాలు పొంది, ఈ శుభకార్యానికి భాగస్వాములు కావాలని మనవి. 🙏✨          
-          <br />
-          <br />
-          With devotion and joy, <b>HANUMAN YOUTH ASSOCIATION</b> is conducting a special <b>LORD GANESH POOJA</b>. We warmly invite everyone to join us, take the divine blessings of Lord Ganesh, and be a part of this auspicious occasion. 🙏✨ </CardDescription>
+          🎉🙏 Sri Ganesh Nimajjanam Successfully Completed! 🙏🎉 <br />
+          ✨ Thank you all for your devotion and support.<br/>
+          🌸 See you again with Bappa’s arrival next year! 🌸<br/>
+          💫 Ganpati Bappa Morya 💫 </CardDescription>
           <div className="space-y-2 text-sm text-red-600 dark:text-red-400">
-            <div className="flex items-center gap-2">
+            {/* <div className="flex items-center gap-2">
               <Calendar className="h-4 w-4" />
-              {/* <span>{getTomorrowDate()}</span> */}
-              <span><p>Every Day</p></span>
-            </div>
-            <div className="flex items-center gap-2">
+              <span>{getTomorrowDate()}</span>
+              <span><p>untill next </p></span>
+            </div> */}
+            {/* <div className="flex items-center gap-2">
               <Clock className="h-4 w-4" />
-              <span>6:00 PM</span>
-            </div>
+              <span>will be soon.</span>
+            </div> */}
             <div className="flex items-center gap-2">
               <MapPin className="h-4 w-4" />
               <span>Ganesh Mandapam, RachaBanda, BC Colony, Akanpally village</span>
